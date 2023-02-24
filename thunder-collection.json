@@ -1,0 +1,89 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "reus-e",
+    "dateExported": "2023-02-24T23:33:09.574Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "fc581365-1848-4d18-84be-33706d29cbea",
+            "colId": "eab28c22-be6d-4413-a9d4-6da3707e4a2b",
+            "containerId": "",
+            "name": "LIST USERS",
+            "url": "http://localhost:3333/user/list",
+            "method": "GET",
+            "sortNum": 5000,
+            "created": "2023-02-24T23:06:36.546Z",
+            "modified": "2023-02-24T23:21:21.055Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "f1565487-9cd1-4764-b691-851c8178ec9d",
+            "colId": "eab28c22-be6d-4413-a9d4-6da3707e4a2b",
+            "containerId": "",
+            "name": "GET USER",
+            "url": "http://localhost:3333/user/1",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2023-02-24T23:06:15.755Z",
+            "modified": "2023-02-24T23:26:24.078Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "3f835a72-5818-4793-93fb-8c25ea21e41f",
+            "colId": "eab28c22-be6d-4413-a9d4-6da3707e4a2b",
+            "containerId": "",
+            "name": "CREATE USER",
+            "url": "http://localhost:3333/user",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2023-02-24T23:08:53.483Z",
+            "modified": "2023-02-24T23:11:18.252Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"firstName\":\"John\",\n  \"lastName\":\"Doe\",\n  \"email\":\"jhon@somethingmail.com\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "77c6cfc5-b4bc-4c7f-be3f-a92e5c47df76",
+            "colId": "eab28c22-be6d-4413-a9d4-6da3707e4a2b",
+            "containerId": "",
+            "name": "UPDATE USER",
+            "url": "http://localhost:3333/user/666",
+            "method": "PUT",
+            "sortNum": 30000,
+            "created": "2023-02-24T23:14:50.108Z",
+            "modified": "2023-02-24T23:15:06.210Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"firstName\":\"John\",\n  \"lastName\":\"Doe\",\n  \"email\":\"jhon@somethingmail.com\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "f63c2148-07a6-44ad-a28c-e79ca37e1495",
+            "colId": "eab28c22-be6d-4413-a9d4-6da3707e4a2b",
+            "containerId": "",
+            "name": "DELETE USER",
+            "url": "http://localhost:3333/user/666",
+            "method": "DELETE",
+            "sortNum": 40000,
+            "created": "2023-02-24T23:15:49.068Z",
+            "modified": "2023-02-24T23:16:01.300Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}
