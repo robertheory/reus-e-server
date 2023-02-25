@@ -6,7 +6,7 @@ const itemRouter = Router();
 const prisma = new PrismaClient();
 
 itemRouter.get("/list", async (req, res) => {
-    try{
+    try {
         const items = await prisma.item.findMany();
         res.json(items);
     } catch (error) {
@@ -15,7 +15,7 @@ itemRouter.get("/list", async (req, res) => {
 });
 
 itemRouter.get("/:id", async (req, res) => {
-    try{
+    try {
         const { id } = req.params;
         const item = await prisma.item.findUnique({
             where: {
@@ -28,7 +28,7 @@ itemRouter.get("/:id", async (req, res) => {
         }
 
         res.json(item);
-    } catch(error) {
+    } catch (error) {
         res.status(500).send(error);
     }
 });
@@ -36,18 +36,17 @@ itemRouter.get("/:id", async (req, res) => {
 itemRouter.post("/", async (req, res) => {
     try {
         const { name, price, ownerId, condition } = req.body;
-        console.log(name, price, ownerId, condition);
         const item = await prisma.item.create({
             data: {
-                name, 
-                price, 
-                ownerId, 
+                name,
+                price: Number(price).toFixed(2),
+                ownerId: Number(ownerId),
                 condition,
             },
         });
-        console.log(item);
-        res.json(item);
+        res.status(201).json(item);
     } catch (error) {
+        console.log("error", error);
         res.status(500).send(error);
     }
 });
@@ -62,7 +61,7 @@ itemRouter.put("/:id", async (req, res) => {
             where: {
                 id: Number(id),
             },
-            data: { name, price, condition  },
+            data: { name, price: Number(price).toFixed(2), condition },
         });
 
         res.json(item);
