@@ -9,7 +9,7 @@ userRouter.get("/list", async (_, res) => {
     try {
         const users = await prisma.user.findMany();
 
-        res.json(users).status(200);
+        res.status(201).json(users);
     } catch (error) {
         res.status(500).send(error);
     }
@@ -29,7 +29,7 @@ userRouter.get("/:id", async (req, res) => {
             res.status(404).json({ error: "User not found" });
         }
 
-        res.json(user).status(200);
+        res.status(201).json(user);
     } catch (error) {
         res.status(500).send(error);
     }
@@ -55,7 +55,7 @@ userRouter.post("/", async (req, res) => {
             },
         });
 
-        res.json(user).status(201);
+        res.status(201).json(user);
     } catch (error) {
         res.status(500).send(error);
     }
@@ -82,7 +82,7 @@ userRouter.put("/:id", async (req, res) => {
             data: { firstName, lastName, email },
         });
 
-        res.json(user);
+        res.status(200).json(user);
     } catch (error) {
         res.status(500).send(error);
     }
@@ -98,7 +98,7 @@ userRouter.delete("/:id", async (req, res) => {
             },
         });
 
-        res.send().status(200);
+        res.status(200).send();
     } catch (error) {
         res.status(500).send(error);
     }
