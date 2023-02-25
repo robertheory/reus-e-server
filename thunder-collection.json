@@ -1,20 +1,49 @@
 {
     "client": "Thunder Client",
     "collectionName": "reus-e",
-    "dateExported": "2023-02-24T23:33:09.574Z",
+    "dateExported": "2023-02-25T01:29:38.406Z",
     "version": "1.1",
-    "folders": [],
+    "folders": [
+        {
+            "_id": "efd9d2c0-92ec-4282-9d1f-0beffbbb70f2",
+            "name": "USER",
+            "containerId": "",
+            "created": "2023-02-25T01:16:28.126Z",
+            "sortNum": 10000
+        },
+        {
+            "_id": "1130770a-f0eb-40a4-8aeb-3eba462da2f1",
+            "name": "ITEM",
+            "containerId": "",
+            "created": "2023-02-25T01:16:41.284Z",
+            "sortNum": 20000
+        }
+    ],
     "requests": [
         {
             "_id": "fc581365-1848-4d18-84be-33706d29cbea",
             "colId": "eab28c22-be6d-4413-a9d4-6da3707e4a2b",
-            "containerId": "",
+            "containerId": "efd9d2c0-92ec-4282-9d1f-0beffbbb70f2",
             "name": "LIST USERS",
             "url": "http://localhost:3333/user/list",
             "method": "GET",
-            "sortNum": 5000,
+            "sortNum": 10000,
             "created": "2023-02-24T23:06:36.546Z",
-            "modified": "2023-02-24T23:21:21.055Z",
+            "modified": "2023-02-25T01:16:34.663Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "b606cf8d-a0a1-4735-b9fd-be95902b2bf9",
+            "colId": "eab28c22-be6d-4413-a9d4-6da3707e4a2b",
+            "containerId": "1130770a-f0eb-40a4-8aeb-3eba462da2f1",
+            "name": "LIST ITEMS",
+            "url": "http://localhost:3333/item/list",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2023-02-25T01:16:41.284Z",
+            "modified": "2023-02-25T01:17:00.985Z",
             "headers": [],
             "params": [],
             "tests": []
@@ -22,13 +51,27 @@
         {
             "_id": "f1565487-9cd1-4764-b691-851c8178ec9d",
             "colId": "eab28c22-be6d-4413-a9d4-6da3707e4a2b",
-            "containerId": "",
+            "containerId": "efd9d2c0-92ec-4282-9d1f-0beffbbb70f2",
             "name": "GET USER",
             "url": "http://localhost:3333/user/1",
             "method": "GET",
-            "sortNum": 10000,
+            "sortNum": 20000,
             "created": "2023-02-24T23:06:15.755Z",
-            "modified": "2023-02-24T23:26:24.078Z",
+            "modified": "2023-02-25T01:16:35.342Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "51f0133c-1856-4071-9c8f-14844bee87d9",
+            "colId": "eab28c22-be6d-4413-a9d4-6da3707e4a2b",
+            "containerId": "1130770a-f0eb-40a4-8aeb-3eba462da2f1",
+            "name": "GET ITEM",
+            "url": "http://localhost:3333/item/1",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2023-02-25T01:16:41.285Z",
+            "modified": "2023-02-25T01:18:11.021Z",
             "headers": [],
             "params": [],
             "tests": []
@@ -36,18 +79,37 @@
         {
             "_id": "3f835a72-5818-4793-93fb-8c25ea21e41f",
             "colId": "eab28c22-be6d-4413-a9d4-6da3707e4a2b",
-            "containerId": "",
+            "containerId": "efd9d2c0-92ec-4282-9d1f-0beffbbb70f2",
             "name": "CREATE USER",
             "url": "http://localhost:3333/user",
             "method": "POST",
-            "sortNum": 20000,
+            "sortNum": 30000,
             "created": "2023-02-24T23:08:53.483Z",
-            "modified": "2023-02-24T23:11:18.252Z",
+            "modified": "2023-02-25T01:16:35.956Z",
             "headers": [],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"firstName\":\"John\",\n  \"lastName\":\"Doe\",\n  \"email\":\"jhon@somethingmail.com\"\n}",
+                "raw": "{\n  \"firstName\":\"John\",\n  \"lastName\":\"Doe\",\n  \"email\":\"jhon2@somethingmail.com\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "70f50f4f-d950-469d-9120-2452e74505a9",
+            "colId": "eab28c22-be6d-4413-a9d4-6da3707e4a2b",
+            "containerId": "1130770a-f0eb-40a4-8aeb-3eba462da2f1",
+            "name": "CREATE ITEM",
+            "url": "http://localhost:3333/item",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2023-02-25T01:16:41.286Z",
+            "modified": "2023-02-25T01:24:58.011Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\"name\":\"Test\",\n \"price\":129,\n \"ownerId\":\"1\",\n \"condition\":\"Novo\"\n}",
                 "form": []
             },
             "tests": []
@@ -55,18 +117,37 @@
         {
             "_id": "77c6cfc5-b4bc-4c7f-be3f-a92e5c47df76",
             "colId": "eab28c22-be6d-4413-a9d4-6da3707e4a2b",
-            "containerId": "",
+            "containerId": "efd9d2c0-92ec-4282-9d1f-0beffbbb70f2",
             "name": "UPDATE USER",
-            "url": "http://localhost:3333/user/666",
+            "url": "http://localhost:3333/user/1",
             "method": "PUT",
-            "sortNum": 30000,
+            "sortNum": 40000,
             "created": "2023-02-24T23:14:50.108Z",
-            "modified": "2023-02-24T23:15:06.210Z",
+            "modified": "2023-02-25T01:16:36.525Z",
             "headers": [],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"firstName\":\"John\",\n  \"lastName\":\"Doe\",\n  \"email\":\"jhon@somethingmail.com\"\n}",
+                "raw": "{\n  \"firstName\":\"John\",\n  \"lastName\":\"Doe\",\n  \"email\":\"jhon1231@somethingmail.com\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "08b62cf4-8b46-444f-8f11-8728f19e4e86",
+            "colId": "eab28c22-be6d-4413-a9d4-6da3707e4a2b",
+            "containerId": "1130770a-f0eb-40a4-8aeb-3eba462da2f1",
+            "name": "UPDATE ITEM",
+            "url": "http://localhost:3333/item/1",
+            "method": "PUT",
+            "sortNum": 40000,
+            "created": "2023-02-25T01:16:41.287Z",
+            "modified": "2023-02-25T01:28:32.421Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\":\"Test\",\n \"price\":129,\n \"condition\":\"Novo\"\n}",
                 "form": []
             },
             "tests": []
@@ -74,13 +155,27 @@
         {
             "_id": "f63c2148-07a6-44ad-a28c-e79ca37e1495",
             "colId": "eab28c22-be6d-4413-a9d4-6da3707e4a2b",
-            "containerId": "",
+            "containerId": "efd9d2c0-92ec-4282-9d1f-0beffbbb70f2",
             "name": "DELETE USER",
-            "url": "http://localhost:3333/user/666",
+            "url": "http://localhost:3333/user/1",
             "method": "DELETE",
-            "sortNum": 40000,
+            "sortNum": 50000,
             "created": "2023-02-24T23:15:49.068Z",
-            "modified": "2023-02-24T23:16:01.300Z",
+            "modified": "2023-02-25T01:16:37.081Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "6bfb680c-e6c2-4c75-867c-35ee8f841673",
+            "colId": "eab28c22-be6d-4413-a9d4-6da3707e4a2b",
+            "containerId": "1130770a-f0eb-40a4-8aeb-3eba462da2f1",
+            "name": "DELETE ITEM",
+            "url": "http://localhost:3333/item/1",
+            "method": "DELETE",
+            "sortNum": 50000,
+            "created": "2023-02-25T01:16:41.288Z",
+            "modified": "2023-02-25T01:28:51.396Z",
             "headers": [],
             "params": [],
             "tests": []
